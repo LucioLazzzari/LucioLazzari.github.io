@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucio Lazzari | Portfolio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">LUCIO LAZZARI</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#cv">CV Técnico</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <!-- INICIO (Con tu foto de perfil integrada) -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Lucio Lazzari</h1>
+                    <h3>Artista Visual e Ilustrador</h3>
+                    <p>Artista visual e ilustrador con formación en artes plásticas, historia del arte y conservación de obras. Experiencia en gestión de proyectos artísticos, curaduría, montaje y atención al público.</p>
+                </div>
+                <div class="hero-avatar">
+                    <img src="imagenes/perfil.jpg" alt="Lucio Lazzari" onerror="this.onerror=null; this.src='imagenes/perfil.jpg.jpg'; this.onerror=null; this.src='imagenes/perfil.png'; this.onerror=null; this.src='imagenes/perfil.jpeg'; this.onerror=function(){this.src='https://placeholder.com';};">
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTAFOLIO -->
+        <section id="portafolio">
+            <h2>Portafolio</h2>
+            <div class="tab-container">
+                <button class="tab-btn active" onclick="openGallery('ilustracion', this)">Ilustracion</button>
+                <button class="tab-btn" onclick="openGallery('pintura', this)">Pintura</button>
+                <button class="tab-btn" onclick="openGallery('proyectos', this)">Proyectos</button>
+                <button class="tab-btn" onclick="openGallery('tattoo', this)">Tattoo</button>
+            </div>
+
+            <div id="ilustracion" class="gallery-wrapper active"></div>
+            <div id="pintura" class="gallery-wrapper"></div>
+
+            <!-- PROYECTOS (Limpio y original como querías) -->
+            <div id="proyectos" class="gallery-wrapper">
+                <div class="gallery-item-project">
+                    <strong>Galería Virtual "Dibujos Olvidados"</strong><br>
+                    <a href="https://artsteps.com" target="_blank">Ver Entorno 3D →</a>
+                </div>
+                <div class="gallery-item-project">
+                    <strong>Proyecto "Un lugar en el Mundo"</strong><br>
+                    <a href="https://youtube.com" target="_blank">Ver Video →</a>
+                </div>
+            </div>
+
+            <div id="tattoo" class="gallery-wrapper"></div>
+        </section>
+
+        <!-- SECCIÓN CURRÍCULUM -->
+        <section id="cv">
+            <h2>Currículum Vitae</h2>
+            <div class="cv-block">
+                <div class="cv-title">Gestión y Montaje de Muestras Personales y Colectivas</div>
+                <div class="cv-meta">2021 - Presente</div>
+                <ul>
+                    <li>Logística, montaje y curaduría para muestras como "PSICOGRAFÍAS" (2025) y "0-800 MIEDO" (2022).</li>
+                    <li>Participación en certámenes de pintura y gestión comunitaria.</li>
+                </ul>
+            </div>
+            <div class="cv-block">
+                <div class="cv-title">Dirección de Proyectos Culturales Independientes</div>
+                <div class="cv-meta">2022 - Presente</div>
+                <ul>
+                    <li>Desarrollo de entornos virtuales 3D en Artsteps.</li>
+                    <li>Realización de proyectos audiovisuales de arte urbano.</li>
+                </ul>
+            </div>
+            <div class="cv-block">
+                <div class="cv-title">Formación Académica</div>
+                <div class="cv-meta">Escuela de Artes Visuales Lino Enea Spilimbergo (2022 - 2026)</div>
+                <ul>
+                    <li>Tecnicatura en Ilustración (Cursada completa, finales en curso).</li>
+                    <li>Taller de Conservación de Obras (Biblioteca Rivadavia, 2024).</li>
+                    <li>Diseño Gráfico (FADU, UBA / UNS, 2019 - 2022).</li>
+                </ul>
+            </div>
+            <div class="cv-block">
+                <div class="cv-title">Habilidades y Competencias</div>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <h4>Competencias Técnicas</h4>
+                        <ul>
+                            <li>• Preservación de obras</li>
+                            <li>• Montaje de muestras</li>
+                            <li>• Diseño editorial</li>
+                            <li>• Maquetación 3D</li>
+                        </ul>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Competencias Personales</h4>
+                        <ul>
+                            <li>• Mediación cultural</li>
+                            <li>• Oratoria</li>
+                            <li>• Resolución de problemas</li>
+                            <li>• Inglés (Oxford)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <div class="contact-grid">
+                <div class="contact-card">Almagro, CABA</div>
+                <div class="contact-card"><a href="mailto:Luciolazzari123@gmail.com">Luciolazzari123@gmail.com</a></div>
+                <div class="contact-card">2915048266</div>
+                <div class="contact-card"><a href="https://instagram.com" target="_blank">@luciolazzzari</a></div>
+            </div>
+        </section>
+    </div>
+
+    <div id="imageLightbox" class="lightbox" onclick="closeZoom()">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="zoomedImg">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
